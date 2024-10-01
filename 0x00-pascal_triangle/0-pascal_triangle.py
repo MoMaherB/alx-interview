@@ -16,8 +16,8 @@ def pascal_triangle(n=0):
             helper_list.insert(0, 0)
             helper_list.append(0)
             my_list = []
-            for index in range(len(helper_list)):
-                if index < len(helper_list) - 1:
+            for index in range(len(helper_list) - 1):
                     my_list.append(helper_list[index] + helper_list[index + 1])
-        pascal.append(my_list)
+        pascal.append(my_list[:])
+    print(pascal)
     return pascal
