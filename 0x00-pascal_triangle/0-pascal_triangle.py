@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def pascal_triangle(n):
 	"""
     pascal triangle function
@@ -20,7 +22,6 @@ def pascal_triangle(n):
 		pascal.append(my_list)
 		helper_list = my_list[:]
 	return pascal
-		
 
 
 	
