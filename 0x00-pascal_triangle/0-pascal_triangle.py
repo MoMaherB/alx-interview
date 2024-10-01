@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def pascal_triangle(n):
+def pascal_triangle(n=0):
     """
     pascal triangle function
     """
@@ -9,10 +9,10 @@ def pascal_triangle(n):
         return []
     pascal = []
     my_list = [1]
-    helper_list = my_list[:]
 
     for row_len in range(n):
         if row_len > 0:
+            helper_list = my_list[:]
             helper_list.insert(0, 0)
             helper_list.append(0)
             my_list = []
@@ -20,5 +20,4 @@ def pascal_triangle(n):
                 if index < len(helper_list) - 1:
                     my_list.append(helper_list[index] + helper_list[index + 1])
         pascal.append(my_list)
-        helper_list = my_list[:]
     return pascal
