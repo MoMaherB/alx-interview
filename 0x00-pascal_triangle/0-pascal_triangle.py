@@ -2,7 +2,6 @@
 """Pascal's Triangle"""
 
 
-
 def pascal_triangle(n):
     """
     pascal triangle function
