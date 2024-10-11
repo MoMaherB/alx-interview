@@ -21,5 +21,7 @@ def canUnlockAll(boxes):
                 for internal_box in boxes[key]:
                     if internal_box in range(len(unlocked)):
                         unlocked[internal_box] = True
+            if all(unlocked):
+                break
 
-    return all(unlocked)
+    return True
