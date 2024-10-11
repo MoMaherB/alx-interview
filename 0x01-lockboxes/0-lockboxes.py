@@ -24,4 +24,4 @@ def canUnlockAll(boxes):
             if all(unlocked):
                 break
 
-    return True
+    return all(unlocked)
