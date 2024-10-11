@@ -19,5 +19,7 @@ def canUnlockAll(boxes):
             if key in range(len(boxes)):
                 unlocked[key] = True
                 for internal_box in boxes[key]:
-                    unlocked[internal_box] = True
+                    if internal_box in range(len(unlocked)):
+                        unlocked[internal_box] = True
+
     return all(unlocked)
