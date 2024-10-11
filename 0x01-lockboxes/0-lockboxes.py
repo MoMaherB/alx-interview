@@ -13,11 +13,11 @@ def canUnlockAll(boxes):
 
     for i, box in enumerate(boxes):
         if not unlocked[i]:
-            return False
+            continue
 
         for key in box:
             if key in range(len(boxes)):
                 unlocked[key] = True
                 for internal_box in boxes[key]:
                     unlocked[internal_box] = True
-    return True
+    return all(unlocked)
