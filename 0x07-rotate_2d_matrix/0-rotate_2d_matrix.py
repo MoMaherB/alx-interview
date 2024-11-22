@@ -14,12 +14,10 @@ def rotate_2d_matrix(matrix):
         return
 
     for i in range(array_lenth):
-        for j in range(int(array_lenth / 2) + i):
+        for j in range(i + 1, array_lenth):
             if i == j:
                 continue
-            temp = matrix[i][j]
-            matrix[i][j] = matrix[j][i]
-            matrix[j][i] = temp
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 
     for i in range(array_lenth):
         for j in range(int(array_lenth/2)):
