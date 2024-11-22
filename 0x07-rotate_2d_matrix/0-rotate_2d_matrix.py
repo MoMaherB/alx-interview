@@ -10,6 +10,9 @@ def rotate_2d_matrix(matrix):
     """
 
     array_lenth = len(matrix)
+    if not array_lenth or array_lenth != len(matrix[0]):
+        return
+    
     for i in range(array_lenth):
         for j in range(int(array_lenth / 2) + i):
             if i == j:
