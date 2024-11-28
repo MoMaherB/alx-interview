@@ -11,14 +11,18 @@ def makeChange(coins, total):
     """
     if total <= 0:
         return 0
+    if not coins:
+        return -1
 
     coins.sort(reverse=True)
     fewest_number = 0
     for coin in coins:
         if total < coin:
-            return -1
+            continue
         fewest_number += int(total / coin)
         total %= coin
         if total == 0:
             break
+    if total != 0:
+        return -1
     return fewest_number
