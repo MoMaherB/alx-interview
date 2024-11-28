@@ -19,7 +19,7 @@ def makeChange(coins, total):
     for coin in coins:
         if total < coin:
             continue
-        fewest_number += int(total / coin)
+        fewest_number += total // coin
         total %= coin
         if total == 0:
             break
