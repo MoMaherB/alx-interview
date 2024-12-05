@@ -10,19 +10,21 @@ def island_perimeter(grid):
     """
     rows = len(grid)
     cols = len(grid[0])
-    perimeter = 0
+    left = 0
+    top = 0
+    right = 0
+    bottom = 0
 
     for i in range(rows):
         for j in range(cols):
             if grid[i][j] == 1:
-                # Check all four sides
                 if i == 0 or grid[i - 1][j] == 0:
-                    perimeter += 1
+                    top += 1
                 if i == rows - 1 or grid[i + 1][j] == 0:
-                    perimeter += 1
+                    bottom += 1
                 if j == 0 or grid[i][j - 1] == 0:
-                    perimeter += 1
+                    left += 1
                 if j == cols - 1 or grid[i][j + 1] == 0:
-                    perimeter += 1
+                    right += 1
 
-    return perimeter
+    return top + bottom + left + right
