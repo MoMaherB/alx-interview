@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Maria and Ben are playing a game.
+"""
+
 
 def is_prime(number):
     """
@@ -17,7 +21,6 @@ def is_prime(number):
     return True
 
 
-
 def isWinner(x, nums):
     """
     Maria and Ben are playing a game. Given a set of consecutive
@@ -34,7 +37,7 @@ def isWinner(x, nums):
         if count_primes % 2 == 0:
             Ben += 1
         else:
-            Maria += 1	
+            Maria += 1
     if Ben > Maria:
         return "Ben"
     elif Ben == Maria:
