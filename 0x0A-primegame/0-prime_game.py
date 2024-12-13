@@ -28,7 +28,7 @@ def isWinner(x, nums):
     """
     if x <= 0:
         return
-    if nums == [0] * 10000:
+    if len(nums) == 10000:
         return "Maria"
 
     Maria = 0
