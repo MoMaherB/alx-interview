@@ -26,6 +26,8 @@ def isWinner(x, nums):
     Maria and Ben are playing a game. Given a set of consecutive
     integers starting from 1 up to and including n
     """
+    if x <= 0:
+        return
     Maria = 0
     Ben = 0
     for round in nums:
